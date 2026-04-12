@@ -169,7 +169,7 @@ function setupCopyButtons() {
     const gems = document.getElementById('fish-total-gems')?.textContent || '0';
     const bc = document.getElementById('fish-byte-coins')?.textContent || '0';
     const rate = document.getElementById('bc-rate')?.value || '230';
-    return `${gems}/${bc}bc,rate ${rate}`;
+    return `${gems}/${bc}bc, rate ${rate}`;
   });
 }
 
