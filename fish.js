@@ -166,8 +166,10 @@ function updateAllTotals() {
 /* ─── COPY BUTTONS ─── */
 function setupCopyButtons() {
   setupCopy('copy-fish-gems', () => {
-    const gems = document.getElementById('fish-total-gems')?.textContent || '0';
-    const bc = document.getElementById('fish-byte-coins')?.textContent || '0';
+    let gems = document.getElementById('fish-total-gems')?.textContent || '0';
+    let bc = document.getElementById('fish-byte-coins')?.textContent || '0';
+    gems = gems.replace(/,/g, '');
+    bc = bc.replace(/,/g, '');
     const rate = document.getElementById('bc-rate')?.value || '230';
     return `${gems}/${bc}bc, rate ${rate}`;
   });

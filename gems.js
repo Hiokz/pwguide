@@ -163,8 +163,10 @@ function updateAllTotals() {
 /* ─── COPY BUTTONS ─── */
 function setupCopyButtons() {
   setupCopy('copy-mining-gems', () => {
-    const gems = document.getElementById('mining-total-gems')?.textContent || '0';
-    const bc = document.getElementById('mining-byte-coins')?.textContent || '0';
+    let gems = document.getElementById('mining-total-gems')?.textContent || '0';
+    let bc = document.getElementById('mining-byte-coins')?.textContent || '0';
+    gems = gems.replace(/,/g, '');
+    bc = bc.replace(/,/g, '');
     const rate = document.getElementById('bc-rate')?.value || '230';
     return `${gems}/${bc}bc, rate ${rate}`;
   });
