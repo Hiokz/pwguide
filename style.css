@@ -152,7 +152,6 @@ body {
 
 .nav-link.active {
   color: var(--color-cyan);
-  background: var(--color-cyan-dim);
 }
 
 .nav-link.disabled {
