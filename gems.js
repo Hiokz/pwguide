@@ -162,7 +162,12 @@ function updateAllTotals() {
 
 /* ─── COPY BUTTONS ─── */
 function setupCopyButtons() {
-  setupCopy('copy-mining-gems', () => document.getElementById('mining-total-gems')?.textContent || '0');
+  setupCopy('copy-mining-gems', () => {
+    const gems = document.getElementById('mining-total-gems')?.textContent || '0';
+    const bc = document.getElementById('mining-byte-coins')?.textContent || '0';
+    const rate = document.getElementById('bc-rate')?.value || '230';
+    return `${gems}/${bc}, rate (${rate})`;
+  });
 }
 
 function setupClearAllButton() {

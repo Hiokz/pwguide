@@ -165,7 +165,12 @@ function updateAllTotals() {
 
 /* ─── COPY BUTTONS ─── */
 function setupCopyButtons() {
-  setupCopy('copy-fish-gems', () => document.getElementById('fish-total-gems')?.textContent || '0');
+  setupCopy('copy-fish-gems', () => {
+    const gems = document.getElementById('fish-total-gems')?.textContent || '0';
+    const bc = document.getElementById('fish-byte-coins')?.textContent || '0';
+    const rate = document.getElementById('bc-rate')?.value || '230';
+    return `${gems}/${bc}, rate (${rate})`;
+  });
 }
 
 function setupClearAllButton() {
