@@ -4,16 +4,20 @@
  * combined mode with fish page via localStorage.
  */
 
-const BYTE_COIN_RATE = 230 / 1000; // 230 bc per 1000 gems
 
 // Gems on this page
 const GEMS_ON_PAGE = ['topaz', 'emerald', 'sapphire', 'ruby', 'diamond'];
 
-// Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   setupRows();
   setupCopyButtons();
-  setupCombineToggle();
+
+  const rateInput = document.getElementById('bc-rate');
+  if (rateInput) {
+    rateInput.addEventListener('input', updateAllTotals);
+    rateInput.addEventListener('change', updateAllTotals);
+  }
+
   updateAllTotals();
   animatePageIn();
   setupNavLinks();
@@ -141,13 +145,12 @@ function updateMiningTotal() {
   });
 
   setEl('mining-total-gems', grandTotal.toLocaleString());
-  const bc = Math.round(grandTotal * BYTE_COIN_RATE);
+
+  const rateInput = document.getElementById('bc-rate');
+  const rate = rateInput ? (parseFloat(rateInput.value) || 0) : 230;
+  const bc = Math.round(grandTotal * (rate / 1000));
+
   setEl('mining-byte-coins', bc.toLocaleString());
-
-  // Save to localStorage for cross-page combine
-  localStorage.setItem('pw_mining_gems', grandTotal);
-
-  updateCombined();
 }
 
 function updateAllTotals() {
@@ -155,43 +158,12 @@ function updateAllTotals() {
   updateMiningTotal();
 }
 
-/* ─── COMBINED (fish + mining) ─── */
-function updateCombined() {
-  const toggle = document.getElementById('combine-toggle');
-  if (!toggle || !toggle.checked) return;
 
-  const miningGems = parseInt(localStorage.getItem('pw_mining_gems') || '0', 10);
-  const fishGems = parseInt(localStorage.getItem('pw_fish_gems') || '0', 10);
-  const combined = miningGems + fishGems;
-  const combinedBc = Math.round(combined * BYTE_COIN_RATE);
-
-  setEl('combined-total-gems', combined.toLocaleString());
-  setEl('combined-byte-coins', combinedBc.toLocaleString());
-}
-
-function setupCombineToggle() {
-  const toggle = document.getElementById('combine-toggle');
-  const section = document.getElementById('combined-section');
-  if (!toggle || !section) return;
-
-  toggle.addEventListener('change', () => {
-    if (toggle.checked) {
-      section.classList.remove('combined-hidden');
-      section.classList.add('combined-visible');
-      updateCombined();
-    } else {
-      section.classList.add('combined-hidden');
-      section.classList.remove('combined-visible');
-    }
-  });
-}
 
 /* ─── COPY BUTTONS ─── */
 function setupCopyButtons() {
   setupCopy('copy-mining-gems', () => document.getElementById('mining-total-gems')?.textContent || '0');
   setupCopy('copy-mining-bc', () => document.getElementById('mining-byte-coins')?.textContent || '0');
-  setupCopy('copy-combined-gems', () => document.getElementById('combined-total-gems')?.textContent || '0');
-  setupCopy('copy-combined-bc', () => document.getElementById('combined-byte-coins')?.textContent || '0');
 }
 
 function setupCopy(id, valueFn) {

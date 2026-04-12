@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
   <!-- Page transition overlay -->
   <div id="page-transition" class="page-transition"></div>
@@ -26,7 +28,6 @@
       <nav class="nav-links">
         <a href="index.html" class="nav-link" id="nav-mining">Mining Gems</a>
         <a href="fish.html" class="nav-link active" id="nav-fish">Fish Gems</a>
-        <a href="#" class="nav-link disabled" id="nav-prices">Prices <span class="soon-badge">soon</span></a>
       </nav>
     </div>
   </header>
@@ -806,61 +807,32 @@
             <div class="summary-value-group">
               <span class="summary-value" id="fish-total-gems">0</span>
               <button class="copy-btn" id="copy-fish-gems" title="Copy to clipboard">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
               </button>
             </div>
           </div>
           <div class="summary-row">
             <span>Byte coins</span>
-            <div class="summary-sub">Rate 1k / 230 bc</div>
+            <div class="summary-sub">Rate 1k / <input type="number" id="bc-rate" class="gem-input" value="230" min="0"
+                style="width: 60px; text-align: center; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.2); border-radius: 4px; padding: 2px 4px; color: inherit; font: inherit;" />
+              bc</div>
             <div class="summary-value-group">
               <span class="summary-value" id="fish-byte-coins">0</span>
               <button class="copy-btn" id="copy-fish-bc" title="Copy to clipboard">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
               </button>
             </div>
           </div>
         </div>
-
-        <div class="summary-section">
-          <div class="summary-section-title combined-title">
-            Combined totals
-            <label class="toggle-switch" title="Include fish + mining together">
-              <input type="checkbox" id="combine-toggle" />
-              <span class="toggle-slider"></span>
-            </label>
-          </div>
-          <p class="combine-desc">Include fish + mining together</p>
-          <div id="combined-section" class="combined-hidden">
-            <div class="summary-row">
-              <span>Total gems</span>
-              <div class="summary-value-group">
-                <span class="summary-value" id="combined-total-gems">0</span>
-                <button class="copy-btn" id="copy-combined-gems" title="Copy to clipboard">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                </button>
-              </div>
-            </div>
-            <div class="summary-row">
-              <span>Byte coins</span>
-              <div class="summary-value-group">
-                <span class="summary-value" id="combined-byte-coins">0</span>
-                <button class="copy-btn" id="copy-combined-bc" title="Copy to clipboard">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-
-      <!-- Navigation card -->
-      <div class="summary-card nav-card">
-        <div class="summary-section-title">Navigation</div>
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-list-link">Mining Gems</a></li>
-          <li><a href="fish.html" class="nav-list-link active">Fish Gems</a></li>
-        </ul>
       </div>
     </aside>
   </main>
@@ -876,4 +848,5 @@
 
   <script src="fish.js"></script>
 </body>
+
 </html>
