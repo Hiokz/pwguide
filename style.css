@@ -792,12 +792,16 @@ body {
 
 @media (max-width: 960px) {
   .main-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     padding: 20px 16px 60px;
   }
 
   .summary-panel {
     position: static;
+    width: 100%;
+    order: -1;
+    /* Places the summary panel above the gems grid on mobile */
   }
 }
 
