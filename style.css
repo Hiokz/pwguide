@@ -261,45 +261,62 @@ body {
 
 .gem-sizes {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 16px 12px 20px;
+  gap: 4px;
 }
 
 .gem-size-row {
-  display: grid;
-  grid-template-columns: 34px 68px 1fr auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding: 9px 16px;
-  border-bottom: 1px solid var(--color-border);
+  gap: 10px;
+  flex: 1;
+  padding: 10px 6px;
+  border-right: 1px solid var(--color-border);
   transition: background var(--transition);
+  border-radius: 8px;
 }
 
 .gem-size-row:last-child {
-  border-bottom: none;
+  border-right: none;
 }
 
 .gem-size-row:hover {
-  background: rgba(56, 189, 248, 0.03);
+  background: rgba(56, 189, 248, 0.04);
 }
 
 .gem-img {
-  width: 30px;
-  height: 30px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 6px;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.gem-size-row:hover .gem-img {
+  border-color: rgba(56, 189, 248, 0.3);
+  background: rgba(56, 189, 248, 0.06);
 }
 
 .fish-img {
-  width: 34px;
-  height: 34px;
+  width: 72px;
+  height: 72px;
 }
 
 .size-label {
-  font-size: 12.5px;
+  font-size: 11.5px;
   color: var(--color-text-muted);
-  font-weight: 500;
+  font-weight: 600;
   white-space: nowrap;
+  text-align: center;
+  letter-spacing: 0.2px;
 }
 
 /* =============================================
@@ -358,6 +375,7 @@ body {
   outline: none;
   transition: border-color var(--transition), box-shadow var(--transition);
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .gem-input::-webkit-outer-spin-button,
@@ -371,19 +389,9 @@ body {
   box-shadow: 0 0 0 2px var(--color-cyan-glow);
 }
 
-/* Gem value result */
+/* Gem value result — hidden in horizontal layout */
 .gem-value-label {
-  font-size: 12.5px;
-  color: var(--color-text-sub);
-  font-variant-numeric: tabular-nums;
-  font-weight: 500;
-  min-width: 52px;
-  text-align: right;
-  transition: color var(--transition);
-}
-
-.gem-value-label.nonzero {
-  color: var(--color-success);
+  display: none;
 }
 
 .calc-val {
