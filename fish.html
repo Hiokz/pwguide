@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PW Fish Gems Calculator</title>
+  <meta name="description" content="Pixel Worlds Gemstone &amp; Fish gems calculator." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Page transition overlay -->
+  <div id="page-transition" class="page-transition"></div>
+
+  <!-- Background -->
+  <div class="bg-overlay"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="PW Gems" class="logo" id="logo" />
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link" id="nav-mining">Mining Gems</a>
+        <a href="fish.html" class="nav-link active" id="nav-fish">Fish Gems</a>
+        <a href="#" class="nav-link disabled" id="nav-prices">Prices <span class="soon-badge">soon</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="main-layout">
+    <!-- Fish gem cards grid -->
+    <section class="gems-grid" id="gems-grid">
+
+      <!-- Kingfish -->
+      <div class="gem-card" data-gem="kingfish">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Kingfish</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="kingfish-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="kingfish" data-size="tiny" data-value="3">
+            <img src="images/fishes/Kingfish_(Tiny).png" alt="Kingfish Tiny" class="gem-img fish-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="kingfish-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="kingfish" data-size="small" data-value="6">
+            <img src="images/fishes/Kingfish_(Small).png" alt="Kingfish Small" class="gem-img fish-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="kingfish-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="kingfish" data-size="medium" data-value="12">
+            <img src="images/fishes/Kingfish_(Medium).png" alt="Kingfish Medium" class="gem-img fish-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="kingfish-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="kingfish" data-size="large" data-value="30">
+            <img src="images/fishes/Kingfish_(Large).png" alt="Kingfish Large" class="gem-img fish-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="kingfish-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="kingfish" data-size="huge" data-value="90">
+            <img src="images/fishes/Kingfish_(Huge).png" alt="Kingfish Huge" class="gem-img fish-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="kingfish-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Piranha -->
+      <div class="gem-card" data-gem="piranha">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Piranha</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="piranha-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="piranha" data-size="tiny" data-value="5">
+            <img src="images/fishes/Piranha_(Tiny).png" alt="Piranha Tiny" class="gem-img fish-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="piranha-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="piranha" data-size="small" data-value="10">
+            <img src="images/fishes/Piranha_(Small).png" alt="Piranha Small" class="gem-img fish-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="piranha-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="piranha" data-size="medium" data-value="20">
+            <img src="images/fishes/Piranha_(Medium).png" alt="Piranha Medium" class="gem-img fish-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="piranha-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="piranha" data-size="large" data-value="50">
+            <img src="images/fishes/Piranha_(Large).png" alt="Piranha Large" class="gem-img fish-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="piranha-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="piranha" data-size="huge" data-value="100">
+            <img src="images/fishes/Piranha_(Huge).png" alt="Piranha Huge" class="gem-img fish-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="piranha-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dumb Fish -->
+      <div class="gem-card" data-gem="dumbfish">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Dumb Fish</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="dumbfish-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="dumbfish" data-size="tiny" data-value="10">
+            <img src="images/fishes/Dumb_Fish_(Tiny).png" alt="Dumb Fish Tiny" class="gem-img fish-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="dumbfish-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="dumbfish" data-size="small" data-value="20">
+            <img src="images/fishes/Dumb_Fish_(Small).png" alt="Dumb Fish Small" class="gem-img fish-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="dumbfish-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="dumbfish" data-size="medium" data-value="40">
+            <img src="images/fishes/Dumb_Fish_(Medium).png" alt="Dumb Fish Medium" class="gem-img fish-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="dumbfish-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="dumbfish" data-size="large" data-value="100">
+            <img src="images/fishes/Dumb_Fish_(Large).png" alt="Dumb Fish Large" class="gem-img fish-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="dumbfish-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="dumbfish" data-size="huge" data-value="200">
+            <img src="images/fishes/Dumb_Fish_(Huge).png" alt="Dumb Fish Huge" class="gem-img fish-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="dumbfish-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goldfish -->
+      <div class="gem-card" data-gem="goldfish">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Goldfish</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="goldfish-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="goldfish" data-size="tiny" data-value="20">
+            <img src="images/fishes/Goldfish_(Tiny).png" alt="Goldfish Tiny" class="gem-img fish-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="goldfish-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="goldfish" data-size="small" data-value="40">
+            <img src="images/fishes/Goldfish_(Small).png" alt="Goldfish Small" class="gem-img fish-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="goldfish-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="goldfish" data-size="medium" data-value="80">
+            <img src="images/fishes/Goldfish_(Medium).png" alt="Goldfish Medium" class="gem-img fish-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="goldfish-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="goldfish" data-size="large" data-value="200">
+            <img src="images/fishes/Goldfish_(Large).png" alt="Goldfish Large" class="gem-img fish-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="goldfish-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="goldfish" data-size="huge" data-value="300">
+            <img src="images/fishes/Goldfish_(Huge).png" alt="Goldfish Huge" class="gem-img fish-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="goldfish-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Acid Puffer -->
+      <div class="gem-card" data-gem="acidpuffer">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Acid Puffer</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="acidpuffer-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="acidpuffer" data-size="tiny" data-value="30">
+            <img src="images/fishes/Acid_Puffer_(Tiny).png" alt="Acid Puffer Tiny" class="gem-img fish-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="acidpuffer-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="acidpuffer" data-size="small" data-value="60">
+            <img src="images/fishes/Acid_Puffer_(Small).png" alt="Acid Puffer Small" class="gem-img fish-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="acidpuffer-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="acidpuffer" data-size="medium" data-value="120">
+            <img src="images/fishes/Acid_Puffer_(Medium).png" alt="Acid Puffer Medium" class="gem-img fish-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="acidpuffer-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="acidpuffer" data-size="large" data-value="300">
+            <img src="images/fishes/Acid_Puffer_(Large).png" alt="Acid Puffer Large" class="gem-img fish-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="acidpuffer-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="acidpuffer" data-size="huge" data-value="450">
+            <img src="images/fishes/Acid_Puffer_(Huge).png" alt="Acid Puffer Huge" class="gem-img fish-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="acidpuffer-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Herring -->
+      <div class="gem-card" data-gem="herring">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Herring</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="herring-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="herring" data-size="tiny" data-value="3">
+            <img src="images/fishes/Herring_(Tiny).png" alt="Herring Tiny" class="gem-img fish-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="herring-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="herring" data-size="small" data-value="6">
+            <img src="images/fishes/Herring_(Small).png" alt="Herring Small" class="gem-img fish-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="herring-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="herring" data-size="medium" data-value="12">
+            <img src="images/fishes/Herring_(Medium).png" alt="Herring Medium" class="gem-img fish-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="herring-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="herring" data-size="large" data-value="30">
+            <img src="images/fishes/Herring_(Large).png" alt="Herring Large" class="gem-img fish-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="herring-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="herring" data-size="huge" data-value="90">
+            <img src="images/fishes/Herring_(Huge).png" alt="Herring Huge" class="gem-img fish-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="herring-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Butterflyfish -->
+      <div class="gem-card" data-gem="butterflyfish">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Butterflyfish</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="butterflyfish-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="butterflyfish" data-size="tiny" data-value="5">
+            <img src="images/fishes/Butterflyfish_(Tiny).png" alt="Butterflyfish Tiny" class="gem-img fish-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="butterflyfish-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="butterflyfish" data-size="small" data-value="10">
+            <img src="images/fishes/Butterflyfish_(Small).png" alt="Butterflyfish Small" class="gem-img fish-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="butterflyfish-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="butterflyfish" data-size="medium" data-value="20">
+            <img src="images/fishes/Butterflyfish_(Medium).png" alt="Butterflyfish Medium" class="gem-img fish-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="butterflyfish-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="butterflyfish" data-size="large" data-value="50">
+            <img src="images/fishes/Butterflyfish_(Large).png" alt="Butterflyfish Large" class="gem-img fish-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="butterflyfish-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="butterflyfish" data-size="huge" data-value="100">
+            <img src="images/fishes/Butterflyfish_(Huge).png" alt="Butterflyfish Huge" class="gem-img fish-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="butterflyfish-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carp -->
+      <div class="gem-card" data-gem="carp">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Carp</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="carp-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="carp" data-size="tiny" data-value="10">
+            <img src="images/fishes/Carp_(Tiny).png" alt="Carp Tiny" class="gem-img fish-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="carp-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="carp" data-size="small" data-value="20">
+            <img src="images/fishes/Carp_(Small).png" alt="Carp Small" class="gem-img fish-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="carp-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="carp" data-size="medium" data-value="40">
+            <img src="images/fishes/Carp_(Medium).png" alt="Carp Medium" class="gem-img fish-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="carp-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="carp" data-size="large" data-value="100">
+            <img src="images/fishes/Carp_(Large).png" alt="Carp Large" class="gem-img fish-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="carp-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="carp" data-size="huge" data-value="200">
+            <img src="images/fishes/Carp_(Huge).png" alt="Carp Huge" class="gem-img fish-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="carp-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tuna -->
+      <div class="gem-card" data-gem="tuna">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Tuna</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="tuna-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="tuna" data-size="tiny" data-value="20">
+            <img src="images/fishes/Tuna_(Tiny).png" alt="Tuna Tiny" class="gem-img fish-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="tuna-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="tuna" data-size="small" data-value="40">
+            <img src="images/fishes/Tuna_(Small).png" alt="Tuna Small" class="gem-img fish-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="tuna-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="tuna" data-size="medium" data-value="80">
+            <img src="images/fishes/Tuna_(Medium).png" alt="Tuna Medium" class="gem-img fish-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="tuna-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="tuna" data-size="large" data-value="200">
+            <img src="images/fishes/Tuna_(Large).png" alt="Tuna Large" class="gem-img fish-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="tuna-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="tuna" data-size="huge" data-value="300">
+            <img src="images/fishes/Tuna_(Huge).png" alt="Tuna Huge" class="gem-img fish-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="tuna-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sea Angler -->
+      <div class="gem-card" data-gem="seaangler">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Sea Angler</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="seaangler-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="seaangler" data-size="tiny" data-value="30">
+            <img src="images/fishes/Sea_Angler_(Tiny).png" alt="Sea Angler Tiny" class="gem-img fish-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="seaangler-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="seaangler" data-size="small" data-value="60">
+            <img src="images/fishes/Sea_Angler_(Small).png" alt="Sea Angler Small" class="gem-img fish-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="seaangler-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="seaangler" data-size="medium" data-value="120">
+            <img src="images/fishes/Sea_Angler_(Medium).png" alt="Sea Angler Medium" class="gem-img fish-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="seaangler-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="seaangler" data-size="large" data-value="300">
+            <img src="images/fishes/Sea_Angler_(Large).png" alt="Sea Angler Large" class="gem-img fish-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="seaangler-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="seaangler" data-size="huge" data-value="450">
+            <img src="images/fishes/Sea_Angler_(Huge).png" alt="Sea Angler Huge" class="gem-img fish-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="seaangler-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Halibut -->
+      <div class="gem-card" data-gem="halibut">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Halibut</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="halibut-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="halibut" data-size="tiny" data-value="3">
+            <img src="images/fishes/Halibut_(Tiny).png" alt="Halibut Tiny" class="gem-img fish-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="halibut-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="halibut" data-size="small" data-value="6">
+            <img src="images/fishes/Halibut_(Small).png" alt="Halibut Small" class="gem-img fish-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="halibut-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="halibut" data-size="medium" data-value="12">
+            <img src="images/fishes/Halibut_(Medium).png" alt="Halibut Medium" class="gem-img fish-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="halibut-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="halibut" data-size="large" data-value="30">
+            <img src="images/fishes/Halibut_(Large).png" alt="Halibut Large" class="gem-img fish-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="halibut-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="halibut" data-size="huge" data-value="90">
+            <img src="images/fishes/Halibut_(Huge).png" alt="Halibut Huge" class="gem-img fish-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="halibut-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Crab -->
+      <div class="gem-card" data-gem="crab">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Crab</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="crab-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="crab" data-size="tiny" data-value="5">
+            <img src="images/fishes/Crab_(Tiny).png" alt="Crab Tiny" class="gem-img fish-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="crab-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="crab" data-size="small" data-value="10">
+            <img src="images/fishes/Crab_(Small).png" alt="Crab Small" class="gem-img fish-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="crab-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="crab" data-size="medium" data-value="20">
+            <img src="images/fishes/Crab_(Medium).png" alt="Crab Medium" class="gem-img fish-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="crab-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="crab" data-size="large" data-value="50">
+            <img src="images/fishes/Crab_(Large).png" alt="Crab Large" class="gem-img fish-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="crab-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="crab" data-size="huge" data-value="100">
+            <img src="images/fishes/Crab_(Huge).png" alt="Crab Huge" class="gem-img fish-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="crab-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Summary sidebar -->
+    <aside class="summary-panel" id="summary-panel">
+      <div class="summary-card">
+        <h3 class="summary-title">Summary</h3>
+
+        <div class="summary-section">
+          <div class="summary-section-title">Fish gem totals</div>
+          <div class="summary-row">
+            <span>Total gems</span>
+            <div class="summary-value-group">
+              <span class="summary-value" id="fish-total-gems">0</span>
+              <button class="copy-btn" id="copy-fish-gems" title="Copy to clipboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="summary-row">
+            <span>Byte coins</span>
+            <div class="summary-sub">Rate 1k / 230 bc</div>
+            <div class="summary-value-group">
+              <span class="summary-value" id="fish-byte-coins">0</span>
+              <button class="copy-btn" id="copy-fish-bc" title="Copy to clipboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-section">
+          <div class="summary-section-title combined-title">
+            Combined totals
+            <label class="toggle-switch" title="Include fish + mining together">
+              <input type="checkbox" id="combine-toggle" />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <p class="combine-desc">Include fish + mining together</p>
+          <div id="combined-section" class="combined-hidden">
+            <div class="summary-row">
+              <span>Total gems</span>
+              <div class="summary-value-group">
+                <span class="summary-value" id="combined-total-gems">0</span>
+                <button class="copy-btn" id="copy-combined-gems" title="Copy to clipboard">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span>Byte coins</span>
+              <div class="summary-value-group">
+                <span class="summary-value" id="combined-byte-coins">0</span>
+                <button class="copy-btn" id="copy-combined-bc" title="Copy to clipboard">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation card -->
+      <div class="summary-card nav-card">
+        <div class="summary-section-title">Navigation</div>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-list-link">Mining Gems</a></li>
+          <li><a href="fish.html" class="nav-list-link active">Fish Gems</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-link">Mining Gems</a>
+      <a href="fish.html" class="footer-link">Fish Gems</a>
+      <a href="https://www.instagram.com/kangur_pw/" target="_blank" rel="noopener" class="footer-link">Kangaroo</a>
+    </div>
+  </footer>
+
+  <script src="fish.js"></script>
+</body>
+</html>

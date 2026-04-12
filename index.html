@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PW Gems Calculator</title>
+  <meta name="description" content="Pixel Worlds Gemstone &amp; Fish gems calculator." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Page transition overlay -->
+  <div id="page-transition" class="page-transition"></div>
+
+  <!-- Background -->
+  <div class="bg-overlay"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="PW Gems" class="logo" id="logo" />
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active" id="nav-mining">Mining Gems</a>
+        <a href="fish.html" class="nav-link" id="nav-fish">Fish Gems</a>
+        <a href="#" class="nav-link disabled" id="nav-prices">Prices <span class="soon-badge">soon</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="main-layout">
+    <!-- Gem cards grid -->
+    <section class="gems-grid" id="gems-grid">
+
+      <!-- Topaz -->
+      <div class="gem-card" data-gem="topaz">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Topaz</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="topaz-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="topaz" data-size="tiny" data-value="3">
+            <img src="images/gems/Topaz_(Tiny).png" alt="Topaz Tiny" class="gem-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="topaz-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="topaz" data-size="small" data-value="6">
+            <img src="images/gems/Topaz_(Small).png" alt="Topaz Small" class="gem-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="topaz-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="topaz" data-size="medium" data-value="12">
+            <img src="images/gems/Topaz_(Medium).png" alt="Topaz Medium" class="gem-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="topaz-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="topaz" data-size="large" data-value="30">
+            <img src="images/gems/Topaz_(Large).png" alt="Topaz Large" class="gem-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="topaz-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="topaz" data-size="huge" data-value="90">
+            <img src="images/gems/Topaz_(Huge).png" alt="Topaz Huge" class="gem-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="topaz-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Emerald -->
+      <div class="gem-card" data-gem="emerald">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Emerald</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="emerald-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="emerald" data-size="tiny" data-value="5">
+            <img src="images/gems/Emerald_(Tiny).png" alt="Emerald Tiny" class="gem-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="emerald-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="emerald" data-size="small" data-value="10">
+            <img src="images/gems/Emerald_(Small).png" alt="Emerald Small" class="gem-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="emerald-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="emerald" data-size="medium" data-value="20">
+            <img src="images/gems/Emerald_(Medium).png" alt="Emerald Medium" class="gem-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="emerald-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="emerald" data-size="large" data-value="50">
+            <img src="images/gems/Emerald_(Large).png" alt="Emerald Large" class="gem-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="emerald-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="emerald" data-size="huge" data-value="100">
+            <img src="images/gems/Emerald_(Huge).png" alt="Emerald Huge" class="gem-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="emerald-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sapphire -->
+      <div class="gem-card" data-gem="sapphire">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Sapphire</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="sapphire-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="sapphire" data-size="tiny" data-value="10">
+            <img src="images/gems/Sapphire_(Tiny).png" alt="Sapphire Tiny" class="gem-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="sapphire-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="sapphire" data-size="small" data-value="20">
+            <img src="images/gems/Sapphire_(Small).png" alt="Sapphire Small" class="gem-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="sapphire-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="sapphire" data-size="medium" data-value="40">
+            <img src="images/gems/Sapphire_(Medium).png" alt="Sapphire Medium" class="gem-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="sapphire-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="sapphire" data-size="large" data-value="100">
+            <img src="images/gems/Sapphire_(Large).png" alt="Sapphire Large" class="gem-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="sapphire-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="sapphire" data-size="huge" data-value="200">
+            <img src="images/gems/Sapphire_(Huge).png" alt="Sapphire Huge" class="gem-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="sapphire-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ruby -->
+      <div class="gem-card" data-gem="ruby">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Ruby</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="ruby-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="ruby" data-size="tiny" data-value="20">
+            <img src="images/gems/Ruby_(Tiny).png" alt="Ruby Tiny" class="gem-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="ruby-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="ruby" data-size="small" data-value="40">
+            <img src="images/gems/Ruby_(Small).png" alt="Ruby Small" class="gem-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="ruby-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="ruby" data-size="medium" data-value="80">
+            <img src="images/gems/Ruby_(Medium).png" alt="Ruby Medium" class="gem-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="ruby-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="ruby" data-size="large" data-value="200">
+            <img src="images/gems/Ruby_(Large).png" alt="Ruby Large" class="gem-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="ruby-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="ruby" data-size="huge" data-value="300">
+            <img src="images/gems/Ruby_(Huge).png" alt="Ruby Huge" class="gem-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="ruby-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diamond -->
+      <div class="gem-card" data-gem="diamond">
+        <div class="gem-card-header">
+          <h2 class="gem-name">Diamond</h2>
+          <div class="gem-total-display">
+            <span class="gem-total-label">gems:</span>
+            <span class="gem-total-value" id="diamond-total">0</span>
+          </div>
+        </div>
+        <div class="gem-sizes">
+          <div class="gem-size-row" data-gem="diamond" data-size="tiny" data-value="30">
+            <img src="images/gems/Diamond_(Tiny).png" alt="Diamond Tiny" class="gem-img" />
+            <span class="size-label">Tiny</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="diamond-tiny" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="diamond" data-size="small" data-value="60">
+            <img src="images/gems/Diamond_(Small).png" alt="Diamond Small" class="gem-img" />
+            <span class="size-label">Small</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="diamond-small" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="diamond" data-size="medium" data-value="120">
+            <img src="images/gems/Diamond_(Medium).png" alt="Diamond Medium" class="gem-img" />
+            <span class="size-label">Medium</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="diamond-medium" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="diamond" data-size="large" data-value="300">
+            <img src="images/gems/Diamond_(Large).png" alt="Diamond Large" class="gem-img" />
+            <span class="size-label">Large</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="diamond-large" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+          <div class="gem-size-row" data-gem="diamond" data-size="huge" data-value="450">
+            <img src="images/gems/Diamond_(Huge).png" alt="Diamond Huge" class="gem-img" />
+            <span class="size-label">Huge</span>
+            <div class="counter-controls">
+              <button class="btn-dec" aria-label="Decrease">−</button>
+              <input type="number" class="gem-input" value="0" min="0" id="diamond-huge" />
+              <button class="btn-inc" aria-label="Increase">+</button>
+            </div>
+            <span class="gem-value-label">+<span class="calc-val">0</span></span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Summary sidebar -->
+    <aside class="summary-panel" id="summary-panel">
+      <div class="summary-card">
+        <h3 class="summary-title">Summary</h3>
+
+        <div class="summary-section">
+          <div class="summary-section-title">Mining gem totals</div>
+          <div class="summary-row">
+            <span>Total gems</span>
+            <div class="summary-value-group">
+              <span class="summary-value" id="mining-total-gems">0</span>
+              <button class="copy-btn" id="copy-mining-gems" title="Copy to clipboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="summary-row">
+            <span>Byte coins</span>
+            <div class="summary-sub">Rate 1k / 230 bc</div>
+            <div class="summary-value-group">
+              <span class="summary-value" id="mining-byte-coins">0</span>
+              <button class="copy-btn" id="copy-mining-bc" title="Copy to clipboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-section">
+          <div class="summary-section-title combined-title">
+            Combined totals
+            <label class="toggle-switch" title="Include fish + mining together">
+              <input type="checkbox" id="combine-toggle" />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <p class="combine-desc">Include fish + mining together</p>
+          <div id="combined-section" class="combined-hidden">
+            <div class="summary-row">
+              <span>Total gems</span>
+              <div class="summary-value-group">
+                <span class="summary-value" id="combined-total-gems">0</span>
+                <button class="copy-btn" id="copy-combined-gems" title="Copy to clipboard">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span>Byte coins</span>
+              <div class="summary-value-group">
+                <span class="summary-value" id="combined-byte-coins">0</span>
+                <button class="copy-btn" id="copy-combined-bc" title="Copy to clipboard">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation card -->
+      <div class="summary-card nav-card">
+        <div class="summary-section-title">Navigation</div>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-list-link active">Mining Gems</a></li>
+          <li><a href="fish.html" class="nav-list-link">Fish Gems</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-link">Mining Gems</a>
+      <a href="fish.html" class="footer-link">Fish Gems</a>
+      <a href="https://www.instagram.com/kangur_pw/" target="_blank" rel="noopener" class="footer-link">Kangaroo</a>
+    </div>
+  </footer>
+
+  <script src="gems.js"></script>
+</body>
+</html>
