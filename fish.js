@@ -133,7 +133,6 @@ function updateFishTotal(fish) {
   const el = document.getElementById(`${fish}-total`);
   if (el) {
     el.textContent = total.toLocaleString();
-    pulseValue(el);
     if (total > 0) {
       el.style.color = 'var(--color-success)';
     } else {

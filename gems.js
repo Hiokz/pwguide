@@ -130,7 +130,6 @@ function updateGemTotal(gem) {
   const el = document.getElementById(`${gem}-total`);
   if (el) {
     el.textContent = total.toLocaleString();
-    pulseValue(el);
     if (total > 0) {
       el.style.color = 'var(--color-success)';
     } else {
