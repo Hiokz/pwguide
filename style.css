@@ -408,11 +408,9 @@ body {
    ============================================= */
 
 .summary-panel {
-  position: fixed;
+  position: sticky;
   top: calc(var(--header-height) + 18px);
-  right: 28px;
-  width: var(--sidebar-width);
-  z-index: 50;
+  align-self: start;
   display: flex;
   flex-direction: column;
 }
