@@ -578,18 +578,32 @@ body {
 }
 
 .btn-block:hover {
-  filter: brightness(1.1);
+  transform: translateY(-1px);
 }
 
 /* Modifiers */
 .btn-secondary {
-  background: linear-gradient(180deg, #3d4a60 0%, #293448 100%);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: transparent;
+  color: var(--color-text-sub);
+  border: 1px solid var(--color-border);
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text);
 }
 
 .btn-primary {
-  background: linear-gradient(180deg, #6d66fe 0%, #4c44d7 100%);
-  box-shadow: 0 4px 12px rgba(109, 102, 254, 0.3);
+  background: rgba(56, 189, 248, 0.08);
+  color: var(--color-cyan);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: none;
+}
+
+.btn-primary:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.5);
 }
 
 .summary-value {
@@ -854,23 +868,7 @@ body {
   animation-delay: 0.35s;
 }
 
-@keyframes numPulse {
-  0% {
-    transform: scale(1);
-  }
-
-  40% {
-    transform: scale(1.15);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-.value-pulse {
-  animation: numPulse 0.2s ease;
-}
+/* Pulse animation removed */
 
 /* =============================================
    Responsive

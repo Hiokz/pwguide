@@ -202,13 +202,5 @@ function setEl(id, text) {
   const el = document.getElementById(id);
   if (el) {
     el.textContent = text;
-    pulseValue(el);
   }
-}
-
-function pulseValue(el) {
-  el.classList.remove('value-pulse');
-  void el.offsetWidth; // reflow
-  el.classList.add('value-pulse');
-  setTimeout(() => el.classList.remove('value-pulse'), 250);
 }
