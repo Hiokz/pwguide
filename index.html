@@ -357,41 +357,34 @@
     <!-- Summary sidebar -->
     <aside class="summary-panel" id="summary-panel">
       <div class="summary-card">
-        <h3 class="summary-title"><img src="images/gems/Ruby_(Tiny).png"
-            style="width: 24px; height: 24px; object-fit: contain; margin-right: 4px;"> SUMMARY</h3>
-        <div class="summary-section">
-          <div class="summary-section-title">Mining gem totals</div>
-          <div class="summary-row">
-            <span>Total gems</span>
-            <div class="summary-value-group">
-              <span class="summary-value" id="mining-total-gems">0</span>
-              <button class="copy-btn" id="copy-mining-gems" title="Copy to clipboard">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-              </button>
-            </div>
+        <div class="summary-header">
+          <div class="summary-icon">
+            <img src="images/gems/Ruby_(Large).png" style="width: 30px; height: 30px; object-fit: contain;">
           </div>
-          <div class="summary-row">
-            <span>Byte coins</span>
-            <div class="summary-sub">Rate 1k / <input type="number" id="bc-rate" class="gem-input" value="230" min="0"
-                style="width: 60px; text-align: center; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.2); border-radius: 4px; padding: 2px 4px; color: inherit; font: inherit;" />
-              bc</div>
-            <div class="summary-value-group">
-              <span class="summary-value" id="mining-byte-coins">0</span>
-              <button class="copy-btn" id="copy-mining-bc" title="Copy to clipboard">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-              </button>
-            </div>
+          <div class="summary-header-text">
+            <div class="summary-title">SUMMARY</div>
+            <div class="summary-subtitle">Mining gem totals</div>
           </div>
         </div>
-      </div>
+
+        <div class="summary-subcard">
+          <div class="subcard-title mb-sm">TOTAL GEMS</div>
+          <div class="subcard-value value-gold huge-text" id="mining-total-gems">0</div>
+        </div>
+
+        <div class="summary-subcard flex-row">
+          <div class="subcard-left">
+            <div class="subcard-title">BYTE COINS</div>
+            <div class="subcard-meta">Rate 1k / <input type="number" id="bc-rate" class="rate-input" value="230"
+                min="0"> bc</div>
+          </div>
+          <div class="subcard-value value-cyan" id="mining-byte-coins">0</div>
+        </div>
+
+        <div class="summary-buttons">
+          <button class="btn-block btn-secondary" id="clear-mining-gems">Clear all</button>
+          <button class="btn-block btn-primary" id="copy-mining-gems">Copy totals</button>
+        </div>
       </div>
     </aside>
   </main>

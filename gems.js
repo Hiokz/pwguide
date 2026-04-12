@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     rateInput.addEventListener('change', updateAllTotals);
   }
 
+  setupClearAllButton();
   updateAllTotals();
   animatePageIn();
   setupNavLinks();
@@ -163,7 +164,22 @@ function updateAllTotals() {
 /* ─── COPY BUTTONS ─── */
 function setupCopyButtons() {
   setupCopy('copy-mining-gems', () => document.getElementById('mining-total-gems')?.textContent || '0');
-  setupCopy('copy-mining-bc', () => document.getElementById('mining-byte-coins')?.textContent || '0');
+}
+
+function setupClearAllButton() {
+  const btn = document.getElementById('clear-mining-gems');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.gem-size-row').forEach(row => {
+      const input = row.querySelector('.gem-input');
+      const calcVal = row.querySelector('.calc-val');
+      const valueLabel = row.querySelector('.gem-value-label');
+      if (input) input.value = '0';
+      if (calcVal) calcVal.textContent = '0';
+      if (valueLabel) valueLabel.classList.remove('nonzero');
+    });
+    updateAllTotals();
+  });
 }
 
 function setupCopy(id, valueFn) {
