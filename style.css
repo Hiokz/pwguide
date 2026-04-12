@@ -519,12 +519,12 @@ body {
 }
 
 .subcard-value[class*="value-gold"] {
-  color: #ffffff;
+  color: var(--color-gold);
 }
 
 .subcard-value[class*="value-cyan"] {
   font-size: 18px;
-  color: #ffffff;
+  color: var(--color-cyan);
 }
 
 .rate-input {
