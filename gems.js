@@ -190,7 +190,7 @@ function setupCopy(id, valueFn) {
   const btn = document.getElementById(id);
   if (!btn) return;
   btn.addEventListener('click', () => {
-    const val = valueFn().replace(/,/g, '');
+    const val = valueFn();
     navigator.clipboard.writeText(val).then(() => {
       btn.classList.add('copied');
       setTimeout(() => btn.classList.remove('copied'), 1500);
