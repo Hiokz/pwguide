@@ -819,51 +819,63 @@ body {
   }
 
   .gem-sizes {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    justify-content: flex-start;
-    gap: 8px;
-    padding: 12px 10px 14px;
-    scrollbar-width: thin;
-  }
-
-  .gem-sizes::-webkit-scrollbar {
-    height: 4px;
-  }
-
-  .gem-sizes::-webkit-scrollbar-thumb {
-    background: var(--color-border);
-    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    overflow: visible;
   }
 
   .gem-size-row {
-    min-width: 94px;
-    flex: 0 0 auto;
-    padding: 8px 6px;
-    gap: 8px;
-    border-right: 1px solid var(--color-border);
+    display: grid;
+    grid-template-columns: 34px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 0;
+    width: 100%;
+    min-width: 0;
+    flex: none;
   }
 
   .gem-size-row:last-child {
-    border-right: none;
+    border-bottom: none;
   }
 
   .gem-img,
   .fish-img {
-    width: 56px;
-    height: 56px;
+    width: 34px;
+    height: 34px;
+    padding: 2px;
+  }
+
+  .size-label {
+    font-size: 13.5px;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .counter-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
   }
 
   .btn-dec,
   .btn-inc {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
   }
 
   .gem-input {
-    width: 44px;
-    height: 28px;
-    font-size: 13px;
+    width: 50px;
+    height: 32px;
+    font-size: 14px;
+    text-align: center;
   }
 }
 
@@ -874,6 +886,14 @@ body {
 
   .header-inner {
     padding: 0 12px;
+  }
+
+  .logo {
+    height: 28px;
+  }
+
+  .nav-links {
+    gap: 4px;
   }
 
   .nav-link {
@@ -889,16 +909,50 @@ body {
     font-size: 12px;
   }
 
+  .gem-size-row {
+    padding: 8px 12px;
+    gap: 8px;
+    grid-template-columns: 30px 1fr auto;
+  }
+
+  .gem-img,
+  .fish-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .size-label {
+    font-size: 12.5px;
+  }
+
+  .btn-dec,
+  .btn-inc {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .gem-input {
+    width: 44px;
+    height: 28px;
+    font-size: 13px;
+  }
+
   .summary-card {
     padding: 14px;
   }
 
   .huge-text {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .summary-buttons {
+    display: flex;
     flex-direction: row;
     gap: 8px;
+  }
+
+  .summary-buttons button {
+    flex: 1;
   }
 }
