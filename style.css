@@ -794,7 +794,8 @@ body {
   .main-layout {
     display: flex;
     flex-direction: column;
-    padding: 20px 16px 60px;
+    padding: 16px 14px 60px;
+    gap: 16px;
   }
 
   .summary-panel {
@@ -803,21 +804,101 @@ body {
     order: -1;
     /* Places the summary panel above the gems grid on mobile */
   }
+
+  .summary-card {
+    padding: 18px 16px;
+    gap: 12px;
+  }
 }
 
-@media (max-width: 600px) {
-  .gem-size-row {
-    grid-template-columns: 28px 56px 1fr auto;
-    gap: 8px;
-    padding: 8px 12px;
-  }
-
-  .gem-input {
-    width: 48px;
-  }
-
+@media (max-width: 768px) {
   .header-inner {
     padding: 0 16px;
     gap: 16px;
+    justify-content: space-between;
+  }
+
+  .gem-sizes {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 12px 10px 14px;
+    scrollbar-width: thin;
+  }
+
+  .gem-sizes::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .gem-sizes::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 4px;
+  }
+
+  .gem-size-row {
+    min-width: 94px;
+    flex: 0 0 auto;
+    padding: 8px 6px;
+    gap: 8px;
+    border-right: 1px solid var(--color-border);
+  }
+
+  .gem-size-row:last-child {
+    border-right: none;
+  }
+
+  .gem-img,
+  .fish-img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .btn-dec,
+  .btn-inc {
+    width: 28px;
+    height: 28px;
+  }
+
+  .gem-input {
+    width: 44px;
+    height: 28px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-layout {
+    padding: 12px 10px 50px;
+  }
+
+  .header-inner {
+    padding: 0 12px;
+  }
+
+  .nav-link {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .gem-card-header {
+    padding: 10px 14px;
+  }
+
+  .gem-name {
+    font-size: 12px;
+  }
+
+  .summary-card {
+    padding: 14px;
+  }
+
+  .huge-text {
+    font-size: 24px;
+  }
+
+  .summary-buttons {
+    flex-direction: row;
+    gap: 8px;
   }
 }
