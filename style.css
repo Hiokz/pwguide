@@ -193,12 +193,15 @@ body {
    ============================================= */
 
 .gems-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 12px;
+  width: 100%;
 }
 
 .gem-card {
+  width: 100%;
+  min-width: 0;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--card-radius);
@@ -792,17 +795,29 @@ body {
 
 @media (max-width: 960px) {
   .main-layout {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     padding: 16px 14px 60px;
     gap: 16px;
+  }
+
+  .gems-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    width: 100%;
+    order: 1;
+  }
+
+  .gem-card {
+    width: 100%;
+    min-width: 0;
   }
 
   .summary-panel {
     position: static;
     width: 100%;
-    order: -1;
-    /* Places the summary panel above the gems grid on mobile */
+    order: 2; /* Put the summary all the way at the bottom on mobile */
   }
 
   .summary-card {
@@ -812,10 +827,41 @@ body {
 }
 
 @media (max-width: 768px) {
+  .site-header {
+    height: 52px;
+  }
+
   .header-inner {
     padding: 0 16px;
-    gap: 16px;
+    gap: 12px;
     justify-content: space-between;
+  }
+
+  .logo {
+    height: 20px;
+    max-width: 155px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--color-border);
+    white-space: nowrap;
+  }
+
+  .nav-link.active {
+    background: var(--color-cyan-dim);
+    border-color: rgba(56, 189, 248, 0.3);
+    color: var(--color-cyan);
   }
 
   .gem-sizes {
@@ -880,25 +926,34 @@ body {
 }
 
 @media (max-width: 480px) {
+  .site-header {
+    height: 48px;
+  }
+
   .main-layout {
     padding: 12px 10px 50px;
   }
 
   .header-inner {
-    padding: 0 12px;
+    padding: 0 10px;
+    gap: 8px;
+    justify-content: space-between;
   }
 
   .logo {
-    height: 28px;
+    height: 17px;
+    max-width: 130px;
   }
 
   .nav-links {
-    gap: 4px;
+    gap: 6px;
+    flex-shrink: 0;
   }
 
   .nav-link {
-    padding: 5px 10px;
-    font-size: 12px;
+    padding: 5px 9px;
+    font-size: 11.5px;
+    white-space: nowrap;
   }
 
   .gem-card-header {
